@@ -1,0 +1,22 @@
+.wrapper{
+  max-width: 100%;
+  margin: 0 auto;
+  width: var(--page-width-with-margin);
+}
+
+.topContent{
+  padding: 0 var(--page-margin);
+}
+
+.frameworks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--space-16x);
+  color: var(--foreground);
+}
+
+.frameworks svg{
+  height: 34px;
+  width: 34px;
+}

@@ -1,0 +1,13 @@
+.wrapper{
+  padding: 0 var(--page-margin);
+  max-width: 100%;
+  margin: 0 auto;
+  width: var(--page-width-with-margin);
+}
+
+.lastCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 48px;
+}

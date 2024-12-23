@@ -1,0 +1,366 @@
+.wrapper{
+  padding: 0 var(--page-margin);
+  max-width: 100%;
+  margin: 0 auto;
+  width: var(--page-width-with-margin);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  min-height: calc(100vh - 64px);
+}
+
+.mainTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  font-size: 4.5rem;
+  letter-spacing: -.06em;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 40px;
+  --padding: 0.05em;
+}
+
+.mainTitle span{
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(var(--start-color), var(--end-color));
+}
+
+.develop{
+  position: relative;
+  animation-name: anim1;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.bgContainer{
+  position: relative;
+  user-select: none;
+  padding: 0 var(--padding);
+}
+
+.bgContainer:before{
+  content: var(--content);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -10px;
+  width: 100%;
+  background-image: var(--text-gradient);
+  padding: 0 var(--padding);
+}
+
+.preview{
+  position: relative;
+  animation-name: anim2;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.ship{
+  position: relative;
+  animation-name: anim3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+
+.description{
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.6em;
+  letter-spacing: -.02em;
+  max-width: 740px;
+  text-align: center;
+  color: var(--secondary);
+  margin: 0 auto 64px;
+  width: 100%;
+}
+
+.btnWrapper{
+  width: 424px;
+  max-width: 100%;
+  margin: 0 auto var(--space-24x);
+}
+
+.btnContainer{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 12px 0;
+}
+
+.deployBtn, .demoBtn{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  min-width: 0;
+  flex: 0 0 100%;
+  padding: 12px;
+}
+
+.btmBgContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.deployBtn .btn, .demoBtn .btn{
+  display: flex;
+  height: var(--form-large-height);
+  font-size: var(--form-large-font);
+  line-height: var(--form-large-line-height);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+  padding: 0 var(--gap-half);
+  transition: background-color .15s ease;
+}
+
+.deployBtn .btn{
+  background-color: var(--foreground);
+  border: 1px solid var(--foreground);
+  color: var(--background);
+  gap: 8px;
+  width: 100%;
+}
+
+.deployBtn .btn:hover{
+  background-color: #383838;
+}
+
+:global(.dark-theme) .deployBtn .btn:hover{
+  background-color: #cccccc;
+}
+
+.demoBtn .btn{
+  background-color: var(--background);
+  color: var(--foreground);
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  border: 1px solid transparent;
+  width: 100%;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.demoBtn .btn:hover{
+  background-color: transparent;
+  color: var(--background);
+}
+
+.btnText{
+  user-select: none;
+}
+
+.border1, .border2, .border3{
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--radius);
+  background-image: linear-gradient(165deg,var(--start-color),var(--end-color))
+}
+
+.border1{
+  animation-name: anim1;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.border2{
+  animation-name: anim2;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.border3{
+  animation-name: anim3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.border1:before, .border2:before, .border3:before{
+  border: 12px solid transparent;
+  content: "";
+  filter: blur(36px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(165deg,var(--start-color),var(--end-color));
+  top: 0;
+  left: 0;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+
+.link{
+  text-decoration: none;
+  color: unset;
+}
+
+.brandDetails{
+  max-width: 100%;
+}
+
+.sliderContainer{
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.brandSlider{
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: slider;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.fadeLeft, .fadeRight{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+  z-index: 1;
+}
+
+.fadeLeft{
+  left: 0;
+  background: linear-gradient(to right,var(--background),transparent);
+}
+
+.fadeRight{
+  right: 0;
+  background: linear-gradient(to left,var(--background),transparent);
+}
+
+.brands{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:global(.dark-theme) .brands{
+  filter: invert(1);
+  opacity: 0.85;
+}
+
+.brand{
+  margin: 0 var(--gap-half);
+}
+
+.brandDetailsDesktop{
+  max-width: 100%;
+  display: none;
+}
+
+.brandsDesktop{
+  user-select: none;
+}
+
+:global(.dark-theme) .brandsDesktop{
+  filter: invert(1);
+  opacity: 0.85;
+}
+
+.brandsDesktop img{
+  margin: 0 var(--gap-half);
+}
+
+.brandsTop, .brandsBtm{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100vw - var(--gap-double));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brandsBtm{
+  margin-top: var(--gap);
+}
+
+@keyframes anim1{
+  0%, 16.667%, 100%{
+    opacity: 1;
+  }
+  33%, 83.333%{
+    opacity: 0;
+  }
+}
+
+@keyframes anim2{
+  0%, 16.667%, 66.667%, 100%{
+    opacity: 0;
+  }
+  33.333%, 50%{
+    opacity: 1;
+  }
+}
+
+@keyframes anim3{
+  0%, 50%, 100%{
+    opacity: 0;
+  }
+  66.667%, 83.333%{
+    opacity: 1;
+  }
+}
+
+@keyframes slider{
+  0%{
+    translate: 0;
+  }
+  100%{
+    translate: -50%;
+  }
+}
+
+@media screen and (min-width: 600px){
+  .deployBtn, .demoBtn{
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .mainTitle{
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .mainTitle{
+    flex-direction: row;
+    font-size: 5rem;
+  }
+  .brandDetailsDesktop{
+    display: unset;
+  }
+  .sliderContainer{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mainTitle{
+    font-size: 7rem;
+  }
+  .description{
+    font-size: 1.5rem;
+  }
+}

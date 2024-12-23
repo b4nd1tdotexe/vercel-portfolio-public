@@ -1,0 +1,36 @@
+.themeSwitch{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--accents-2);
+  height: var(--form-height);
+  margin: var(--space-8x) 0 0;
+  border-radius: 9999px;
+  align-items: center;
+  padding: 3px;
+  user-select: none;
+  max-width: 100%;
+  width: max-content;
+}
+
+.themeSwitch button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: var(--accents-4);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: color .15s ease;
+}
+
+.themeSwitch button svg{
+  display: block;
+}
+
+.themeSwitch button.active{
+  background-color: var(--accents-2);
+  color: var(--foreground);
+}
